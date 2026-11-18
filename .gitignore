@@ -1,0 +1,15 @@
+conversation*.json
+share-private*.json
+share-link*.txt
+share-runtime*.json
+tools/
+*.log
+node_modules/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+coverage/
+.DS_Store
+Thumbs.db

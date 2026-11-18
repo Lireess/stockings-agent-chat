@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7762dc">
+  <title>Чулочный клуб · Чат агентов</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon">↗</span><span>dialog<span class="brand-dot">.</span></span><span class="beta">AI SPACE</span></div>
+      <div class="search-wrap"><span>⌕</span><input id="search" type="search" aria-label="Поиск в переписке" placeholder="Поиск в переписке"><kbd>/</kbd></div>
+      <div class="tabs"><button class="selected" id="all-tab">Все чаты <span>1</span></button><button id="agents-tab">Участники <span>3</span></button></div>
+      <button class="chat-item" id="chat-item"><span class="avatar group-avatar">✦</span><span class="chat-preview"><strong>Чулочный клуб <span class="pin">⌁</span></strong><span id="preview">Три взгляда на идеальную пару</span></span><span class="chat-badge">AI</span></button>
+      <div class="sidebar-section"><span>ВАШИ СОБЕСЕДНИКИ</span><span>3</span></div>
+      <div id="sidebar-agents"></div>
+      <div class="sidebar-note"><span class="note-symbol">✧</span><strong>Не сценарий. Разговор.</strong><p>Три ИИ-агента с разными мнениями и общей перепиской.</p><span class="small-pill">Powered by OpenCode</span></div>
+      <div class="account"><span class="avatar user-avatar">В</span><div><strong>Вы</strong><span>Участник разговора</span></div><span class="online-dot"></span><button id="leave" class="icon-button" title="Выйти из чата" aria-label="Выйти из чата" hidden>↪</button></div>
+    </aside>
+    <main class="chat">
+      <header class="chat-header">
+        <span class="avatar group-avatar small">✦</span>
+        <div class="header-title"><h1>Чулочный клуб <span>✧</span></h1><p id="header-status">3 ИИ-агента · разговор на паузе</p></div>
+        <span id="live-badge" class="live-badge"><i></i>ПАУЗА</span>
+        <button id="info-toggle" class="icon-button" title="Информация о чате" aria-label="Информация о чате">ⓘ</button>
+      </header>
+      <div class="topic-bar"><span class="topic-icon">⌁</span><div><strong>Тема разговора</strong><p>Какие чулки лучше надевать?</p></div><span class="topic-tag">Стиль & комфорт</span></div>
+      <div class="conversation" id="conversation" tabindex="0" aria-label="Переписка">
+        <div class="date-chip">Сегодня</div>
+        <section class="welcome" id="welcome"><span class="welcome-icon">✦</span><h2>У хорошего выбора<br>есть собеседники.</h2><p>Сол, Алиса и Марк обсудят чулки с трёх сторон:<br>образ, практичность и комфорт. Присоединяйтесь.</p><div class="welcome-tags"><span>✧ Живые ИИ-ответы</span><span>↗ Ваши вопросы</span></div></section>
+        <div id="messages" role="log" aria-label="Сообщения участников" aria-live="polite" aria-relevant="additions"></div>
+        <div id="typing" class="typing" hidden><span class="typing-dots"><i></i><i></i><i></i></span><span id="typing-text"></span></div>
+        <p class="no-results" id="no-results" hidden>Сообщений не найдено</p>
+      </div>
+      <div class="bottom-area">
+        <div class="control-strip"><span id="run-description"><i></i>Всё готово к разговору</span><span id="turn-count">0 / 60 ответов</span><button id="start" class="start-button">▶ Начать разговор</button><button id="stop" class="stop-button" disabled><span>■</span> СТОП</button></div>
+        <form id="composer" class="composer"><span class="composer-icon">✎</span><textarea id="message-input" rows="1" maxlength="2000" aria-label="Ваше сообщение" placeholder="Присоединитесь к разговору…"></textarea><button id="send" type="submit" title="Отправить сообщение" aria-label="Отправить сообщение">➤</button></form>
+        <div class="composer-hint"><span>Enter — отправить · Shift + Enter — новая строка</span><span>Локальный чат · не связан с Telegram</span></div>
+        <p id="notice" role="status" hidden></p>
+      </div>
+    </main>
+    <aside class="details" id="details">
+      <div class="details-heading">ОБ ЭТОМ ЧАТЕ <span>↗</span></div>
+      <div class="club-card"><div class="club-art"><span>✧</span><span>✦</span><span>✧</span></div><h2>Чулочный клуб</h2><p>Маленький совет по большому<br>вопросу стиля</p><span class="private-badge">◈ Локальная группа</span></div>
+      <div class="detail-section"><h3>Участники <span>3 агента + вы</span></h3><div id="detail-agents"></div></div>
+      <div class="detail-section topic-details"><h3>О чём поговорим</h3><span>01 <strong>На каждый день</strong></span><span>02 <strong>Для особого вечера</strong></span><span>03 <strong>В прохладную погоду</strong></span></div>
+      <div class="safety-card"><span>Ⅱ</span><div><strong>Разговор под вашим контролем</strong><p>«СТОП» прерывает ответ агента. «Продолжить» возвращает к обсуждению.</p></div></div>
+      <p class="disclaimer">Ответы генерируются моделью OpenCode и расходуют её лимиты. ИИ может ошибаться. Максимум 60 ответов за запуск.</p>
+      <div class="details-footer"><i></i>Локально на вашем компьютере</div>
+    </aside>
+  </div>
+</body>
+</html>

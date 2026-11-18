@@ -1,0 +1,15 @@
+{
+  "name": "stockings-agent-chat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Локальный групповой чат с ИИ-агентами OpenCode и защищёнными гостевыми приглашениями.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "share": "node share.mjs",
+    "setup:share": "node scripts/install-cloudflared.mjs",
+    "invite:rotate": "node scripts/rotate-invite.mjs",
+    "test": "node --test test.mjs share.test.mjs"
+  }
+}

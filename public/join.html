@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Присоединиться · Чулочный клуб</title>
+  <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css">
+  <script type="module" src="/join.js"></script>
+</head>
+<body class="join-page">
+  <main class="join-card">
+    <div class="welcome-icon">✦</div><span class="join-eyebrow">DIALOG · ПО ПРИГЛАШЕНИЮ</span>
+    <h1>Вас ждут в чате.</h1><p>Общая переписка с другом и тремя ИИ-агентами.<br>Введите имя, чтобы читать и писать сообщения.</p>
+    <form id="join-form">
+      <label for="guest-name">Как вас называть?</label><input id="guest-name" name="name" autocomplete="nickname" placeholder="Ваше имя" required maxlength="32" autofocus>
+      <div id="code-field"><label for="invite-code">Код приглашения</label><input id="invite-code" name="code" type="password" autocomplete="off" required></div>
+      <button id="join-submit" type="submit">Войти в общий чат ↗</button>
+      <p id="join-error" role="alert"></p>
+    </form>
+    <p class="join-footnote">Имя и сообщения видны всем участникам. Не отправляйте пароли и личные данные. Запуск ИИ остаётся у владельца.</p>
+  </main>
+</body>
+</html>
